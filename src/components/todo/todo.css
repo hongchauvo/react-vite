@@ -1,0 +1,133 @@
+/* Container chính của Todo */
+.todo-container {
+    max-width: 500px;
+    /* Chiều rộng tối đa của container */
+    margin: 50px auto;
+    /* Căn giữa container trên trang */
+    padding: 20px;
+    /* Lề trong cho container */
+    background-color: #ffffff;
+    /* Màu nền trắng */
+    border-radius: 10px;
+    /* Bo góc mềm mại */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Đổ bóng nhẹ */
+    font-family: 'Arial', sans-serif;
+    /* Font chữ */
+}
+
+/* Tiêu đề Todo */
+.todo-title {
+    text-align: center;
+    /* Căn giữa văn bản */
+    font-size: 2em;
+    /* Kích thước chữ lớn */
+    color: #333333;
+    /* Màu chữ đậm */
+    margin-bottom: 20px;
+    /* Khoảng cách dưới tiêu đề */
+}
+
+/* Phần thêm mới Todo */
+.todo-new {
+    display: flex;
+    /* Sử dụng flexbox để sắp xếp input và button ngang hàng */
+    gap: 10px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+/* Input thêm Todo */
+.todo-new input {
+    flex: 1;
+    /* Chiếm hết không gian còn lại */
+    padding: 10px 15px;
+    /* Lề trong cho input */
+    border: 2px solid #dddddd;
+    /* Viền xám nhạt */
+    border-radius: 5px;
+    /* Bo góc nhẹ */
+    font-size: 1em;
+    /* Kích thước chữ */
+    transition: border-color 0.3s;
+    /* Hiệu ứng chuyển đổi màu viền */
+}
+
+.todo-new input:focus {
+    border-color: #007bff;
+    /* Màu viền khi focus */
+    outline: none;
+    /* Loại bỏ viền mặc định của trình duyệt */
+}
+
+/* Nút thêm Todo */
+.todo-new button {
+    padding: 10px 20px;
+    /* Lề trong cho button */
+    background-color: #007bff;
+    /* Màu nền xanh */
+    color: #ffffff;
+    /* Màu chữ trắng */
+    border: none;
+    /* Không có viền */
+    border-radius: 5px;
+    /* Bo góc nhẹ */
+    cursor: pointer;
+    /* Con trỏ chuột khi hover */
+    font-size: 1em;
+    /* Kích thước chữ */
+    transition: background-color 0.3s;
+    /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.todo-new button:hover {
+    background-color: #0056b3;
+    /* Màu nền khi hover */
+}
+
+/* Thêm một số hiệu ứng tổng thể cho thân thiện hơn */
+.todo-container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}

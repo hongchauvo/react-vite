@@ -1,7 +1,11 @@
+
+import "./style.css";
 const Mycomponent = () => {
 
-    return (<h3>Võ Hồng Châu Phòng TTPC ĐHQG-HCM</h3>
-
+    return (
+        <>
+            <h3 className="doimau">Võ hồng châu phòng thanh tra pháp chế</h3>
+        </>
     )
 }
 export default Mycomponent
